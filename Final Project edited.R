@@ -113,7 +113,6 @@ rmse(log(x), prediction.model)
 
 
 #____________________________________________________________________
-# Question: Is GARCH model only used to forecast returns? Or can it also forecast *prices*?
 
 # GARCH model to account for non-constant variance
 
