@@ -1,16 +1,3 @@
-This analysis investigates Tesla's weekly stock prices, leveraging time series techniques to forecast future values and explore volatility patterns, with an emphasis on integrating these forecasts into structured options trading strategies. The study begins by preprocessing Tesla's weekly adjusted closing prices, standardizing their frequency, and formatting them as a time series starting in 2010. Exploratory analysis reveals non-constant variance in the data, addressed through log transformations. Differencing methods are then applied to achieve stationarity, with first-order differencing removing trends and second-order differencing eliminating residual patterns. The ACF and PACF plots guide the identification of dependence structures for model selection.
-
-Using diagnostic tools and statistical tests, various ARIMA models are evaluated. The ARIMA(0,2,1) model is selected based on its significant parameters and compliance with residual assumptions. This model is used to forecast weekly prices for four weeks into the future. The forecasts, initially in log-transformed values, are converted back to raw prices using the exponential function. These forecasts are then integrated into specific options strategies, leveraging insights from predicted price levels and volatility.
-
-The analysis employs two well-known options strategies: the bear call spread and the bull put spread. The bear call spread involves selling a call option with a lower strike price ($894) and buying a call option with a higher strike price ($899), anticipating that Tesla's price will stay below $894. Simultaneously, the bull put spread involves selling a put option with a higher strike price ($883) and buying a put option with a lower strike price ($888), anticipating that Tesla's price will remain above $883. Together, these strategies capitalize on the forecasted price movement within a specific range, while managing downside risk through hedging. The annotated visualizations in the analysis plot these strike levels relative to the forecasted prices and their confidence intervals, providing actionable insights for traders.
-
-The model’s performance is assessed through back-testing, comparing predictions to historical data using RMSE. While the model performs well on in-sample data, out-of-sample predictions exhibit higher RMSE, reflecting challenges in forecasting under volatile market conditions. To address non-constant variance observed in the residuals, a GARCH(1,1) model is fitted to the differenced log-transformed data. This volatility model complements ARIMA-based forecasts by accounting for heteroskedasticity, with parameter estimates highlighting significant influences of past errors and volatility.
-
-The integration of forecasting with options trading strategies such as the bear call spread and bull put spread adds significant practical value to the analysis. By using forecasted price ranges and confidence intervals to structure these positions, the study bridges theoretical modeling with real-world financial applications. The analysis provides a comprehensive examination of Tesla's stock price behavior, yielding insights into short-term forecasting, volatility management, and actionable, risk-managed trading strategies.
-
-
-
-
 # Time Series Analysis: Forecasting Tesla Stock Prices Using ARIMA
 
 ## Overview
