@@ -5,7 +5,7 @@ This project explores **Time Series Analysis** techniques, particularly the ARIM
 
 ---
 
-## Advanced Mathematical Theory
+## Mathematical Theory
 
 ### 1. **Autoregressive (AR) Model**
 The AR model expresses the current observation as a function of its past values:
@@ -116,16 +116,16 @@ Predicted Tesla weekly log prices for 4 weeks:
 
 
 $$
-\hat{Y}_{t+n} = \phi_1 Y_{t+n-1} + \theta_1 \epsilon_{t+n-1}
+\hat{Y}_{t+n} = \phi_1 Y_{t+n-1} + \theta_1 \epsilon_{t+n-1}.
 $$
 
 
 ### Real-Scale Forecast
-Inverse transformation to obtain raw prices:
+Inverse transformation to obtain raw prices: 
 
 
 $$
-\hat{X}_{t+n} = \exp(\hat{Y}_{t+n})
+\hat{X}_{t+n} = \exp(\hat{Y}_{t+n}).
 $$
 
 
